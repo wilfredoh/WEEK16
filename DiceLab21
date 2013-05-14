@@ -1,0 +1,61 @@
+// wilfredo henriquwez, using the files sent by the professor.
+/*--------------- Parent Class Dic ---------------*/
+public class Dice 
+{
+private int numberofrolls = 0;
+private int numberofdices = 1;
+public int[] value10 ={0,0,0,0,0,0,0,0,0,0};
+public static int x=0;
+
+  public void setDiceCount(int n )
+  	{
+  	/*--------------- Set number of dices ---------------*/
+  	numberofdices = n;
+  	}
+  
+  public Dice()
+  	{
+  	/*--------------- Dice Constructor ---------------*/
+  	numberofrolls = 0;
+  	numberofdices = 1;		
+  	}
+  
+  
+  public int RollDice()
+  /*--------------- Roll Dice(s) and increment RollCounts ---------------*/
+  	{
+  	int rndno;
+  	rndno = (1 + (int) (Math.random() * 6))* numberofdices;
+  	numberofrolls = numberofrolls + numberofdices ;
+  	if (x < 11)
+  		{
+  		value10[x]=rndno;
+  		x= x + 1;
+  		} 
+  	return rndno;
+  	}
+
+  public int RollCount()
+  	{
+  	return numberofrolls;
+  	}
+
+  public String RollCountMsg()
+  	{
+  	return "Dices rolled thus far: " + numberofrolls ;
+  	}
+  
+  public void  RollHistory()
+  	{
+  	String msg;
+  	for (int i = 0; i < 10; i++)
+  		{
+  		msg = "History of las 10 rolls: ";
+  		msg = msg + value10[i];
+  		}
+  	
+  }
+  
+}
+
+
