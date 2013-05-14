@@ -1,0 +1,30 @@
+// wilfredo henriquwez, using the files sent by the professor.
+
+public class DiceDisplay
+{
+/**
+* 
+*/
+  public static void main(String[] args) 
+  {
+  	
+  	Dice singleDice = new Dice();
+  	for (int i=0; i < 5; i++)
+  		{
+  		System.out.println("Single roll output: " + singleDice.RollDice());
+  		}
+  	System.out.println("singleDice rollcount: " + singleDice.RollCountMsg());
+  	
+  	for (int i=0; i < 10; i++)
+  		{
+  	System.out.println("Show History of 10 valuest: " + singleDice.value10[i]);
+  		}
+
+  	
+  	//  for testing teh tripple Dice extended
+  	// Dice x3Dice = new TrippleDice();
+  	// System.out.println("TrippleDice roll output: " + x3Dice.RollDice());
+  	//  System.out.println("x3Dice rollcount: " + x3Dice.RollCountMsg());
+  	
+  }
+}
